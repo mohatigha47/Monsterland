@@ -1,0 +1,15 @@
+{% extends "layoutgenerale.html.twig" %}
+
+{% block titre %}
+{{ parent() }} : Monstre ID {{monstre.id}}
+{% endblock %}
+
+{% block contenu %}
+<ul>
+    <li>{{ monstre.nom }}</li>
+    <li> {{ monstre.type }}</li>
+    <li> {{ monstre.taille }}</li>
+    <li> {{ monstre.puissance }}</li>
+</ul>
+<a href="{{ path("supprimer_monstre",{'id':monstre.id}) }}">Supprimer ce monstre</a>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layoutgenerale.html.twig" %}
+
+{% block titre %}
+{{ parent() }} : Royaume ID {{royaume.id}}
+{% endblock %}
+
+{% block contenu %}
+<ul>
+    <li>{{ royaume.nom }}</li>
+</ul>
+
+<ul>
+    <h3>Les monstres:</h3>
+    {% for monstre in royaume.monstres %}
+        <li>{{ monstre.nom }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ path('supprimer_royaume',{'id':royaume.id}) }}">Supprimer ce royaume</a>
+{% endblock %}

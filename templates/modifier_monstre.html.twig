@@ -1,0 +1,9 @@
+{% extends "layoutgenerale.html.twig" %}
+
+{% block titre %}
+    {{ parent() }} : Modifier 
+{% endblock %}
+
+{% block contenu %}
+    {{ form(monFormulaire) }}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layoutgenerale.html.twig" %}
+
+{% block titre %}
+{{ parent() }} : Tous les royaumes
+{% endblock %}
+
+{% block contenu %}
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<table>
+    <tr>
+        <td>nom royaume</td>
+        <td>monstres count</td>
+    </tr>
+    {% for royaume in data %}
+    <tr>
+        <td> {{ royaume.nom }} </td>
+        <td>
+            <ul>
+                {% for type, count in royaume.monstresCount %}
+                    <li> {{ type }} : {{ count }} </li>
+                {% endfor %}
+            </ul>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,3 +1,48 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+hello_controller:
+    path: /hello
+    controller: App\Controller\MonstreController::sayHello
+ajouter_monstre:
+    path: /monstres/ajouter
+    controller: App\Controller\MonstreController::ajouterMonstre
+ajouter_royaume:
+    path: /royaumes/ajouter
+    controller: App\Controller\MonstreController::ajouterRoyaume
+tous_monstres:
+    path: /monstres
+    controller: App\Controller\MonstreController::afficherTousMonstres
+tous royaume:
+    path: /royaumes
+    controller: App\Controller\MonstreController::afficherTousRoyaumes
+afficher_monstre:
+    path: /monstre/{id}/afficher
+    controller: App\Controller\MonstreController::afficherMonstre
+afficher_royaume:
+    path: /royaume/{id}/afficher
+    controller: App\Controller\MonstreController::afficherRoyaume
+modifier_monstre:
+    path: /monstre/{id}/modifier
+    controller: App\Controller\MonstreController::modifierMonstre
+mofidier_royaume:
+    path: /royaume/{id}/modifier
+    controller: App\Controller\MonstreController::modifierRoyaume
+supprimer_monstre:
+    path: /monstre/{id}/supprimer
+    controller: App\Controller\MonstreController::supprimerMonstre
+supprimer_royaume:
+    path: /royaume/{id}/supprimer
+    controller: App\Controller\MonstreController::supprimerRoyaume
+monstres_par_type:
+    path: /monstres/{type}
+    controller: App\Controller\MonstreController::monstresParType
+transfer_monstres:
+    path: /transfer/{royaumeA}/{royaumeB}
+    controller: App\Controller\MonstreController::transferMonstres
+action15:
+    path: /action15
+    controller: App\Controller\MonstreController::action15
+action16:
+    path: /action16/{nom}
+    controller: App\Controller\MonstreController::action16

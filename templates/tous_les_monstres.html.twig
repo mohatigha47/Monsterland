@@ -1,0 +1,20 @@
+{% extends "layoutgenerale.html.twig" %}
+
+{% block titre %}
+{{ parent() }} : Tous les monstres
+{% endblock %}
+
+{% block contenu %}
+<ul>
+    {% for monstre in monstres %}
+    <li>Monstre ID {{monstre.id}}
+        <ul>
+            <li>{{ monstre.nom }}</li>
+            <li> {{ monstre.type }}</li>
+            <li> {{ monstre.taille }}</li>
+            <li> {{ monstre.puissance }}</li>
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
